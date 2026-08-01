@@ -5,7 +5,7 @@ import { GlassCard } from '../components/GlassCard';
 import { useAuth } from '../context/AuthContext';
 import { BarChart3, FileText, LayoutDashboard, Paintbrush, Settings, Trash2, Users } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL;
 const categories = ['Wedding', 'Engagement', 'Reception', 'Baby Shower'];
 const statuses = ['draft', 'published'];
 

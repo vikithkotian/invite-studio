@@ -40,6 +40,7 @@ import {
 const weddingBackground = new URL('../../../assets/designs/Wedding-1-BG.png', import.meta.url).href;
 const ornamentalDivide3Url = new URL('../../../assets/designs/Ornamental divide 3.png', import.meta.url).href;
 const lineImageUrl = new URL('../../../assets/designs/Line.png', import.meta.url).href;
+const API_URL = import.meta.env.VITE_API_URL;
 
 const ORNAMENT_DIVIDER_TOP = 300;
 const ORNAMENT_DIVIDER_SCALE_WIDTH = 280;
@@ -994,8 +995,8 @@ export function EditorPage() {
     setUseBlankAdminCanvas(false);
 
     const endpoint = isAdminTemplateEditor
-      ? `http://localhost:5000/api/admin/templates/${routeTemplateId}`
-      : `http://localhost:5000/api/templates/${routeTemplateId}`;
+      ? `${API_URL}/admin/templates/${routeTemplateId}`
+      : `${API_URL}/templates/${routeTemplateId}`;
     const requestHeaders = isAdminTemplateEditor && token ? { Authorization: `Bearer ${token}` } : undefined;
 
     fetch(endpoint, { headers: requestHeaders })
@@ -2471,7 +2472,7 @@ export function EditorPage() {
       preview: thumbnail ? `${thumbnail.slice(0, 80)}${thumbnail.length > 80 ? '...' : ''}` : '',
     });
     console.log(`Saving template editor data from route: /admin/templates/${routeTemplateId}/editor`);
-    const response = await fetch(`http://localhost:5000/api/admin/templates/${routeTemplateId}/editor-data`, {
+    const response = await fetch(`${API_URL}/admin/templates/${routeTemplateId}/editor-data`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -2490,7 +2491,7 @@ export function EditorPage() {
 
     console.log(`Publishing template from editor route: /admin/templates/${routeTemplateId}/editor`);
     await saveTemplateToMongo();
-    const response = await fetch(`http://localhost:5000/api/admin/templates/${routeTemplateId}/status`, {
+    const response = await fetch(`${API_URL}/admin/templates/${routeTemplateId}/status`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

@@ -5,6 +5,8 @@ import { GlassCard } from '../components/GlassCard';
 import { GlowButton } from '../components/GlowButton';
 import { FloatingBlob } from '../components/FloatingBlob';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export function ResetPasswordPage() {
   const { token } = useParams();
   const navigate = useNavigate();
@@ -37,7 +39,7 @@ export function ResetPasswordPage() {
     setLoading(true);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/reset-password/${token}`, {
+      const response = await fetch(`${API_URL}/auth/reset-password/${token}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=block');
+
+@font-face {
+	font-family: 'Relicta-Light';
+	src: url('../../assets/fonts/Relicta-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Calisto MT';
+	src: url('../../assets/fonts/calisto-mt-bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Infinite Stroke';
+	src: url('../../assets/fonts/Infinite_Stroke.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Joseph Sophia';
+	src: url('../../assets/fonts/josephsophia.ttf') format('truetype'),
+		 url('../../assets/fonts/josephsophia.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'MG Script';
+	src: url('../../assets/fonts/MG script.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'MG Serif';
+	src: url('../../assets/fonts/MG serif.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Identic Partner Script';
+	src: url('../../assets/fonts/Identic Partner Script Demo.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Identic Partner Script Display';
+	src: url('../../assets/fonts/Identic Partner Script Display Demo.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+

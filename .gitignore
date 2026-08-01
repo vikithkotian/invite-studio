@@ -1,5 +1,26 @@
-node_modules
-dist
+# Environment variables / secrets
 .env
-server/node_modules
-server/.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
